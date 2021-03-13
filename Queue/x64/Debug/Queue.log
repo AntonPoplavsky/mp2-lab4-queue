@@ -1,5 +1,0 @@
-﻿  Queue.cpp
-C:\Users\Anton\Desktop\My\mp2-lab4-queue\Queue\Queue.h(1,9): warning C4068: неизвестная прагма "onceS"
-C:\Users\Anton\Desktop\My\mp2-lab4-queue\Queue\Queue.h(3,34): warning C4305: инициализация: усечение из "__int64" в "int"
-C:\Users\Anton\Desktop\My\mp2-lab4-queue\Queue\Queue.h(3,22): warning C4309: инициализация: усечение константного значения
-  Queue.vcxproj -> C:\Users\Anton\Desktop\My\mp2-lab4-queue\x64\Debug\Queue.exe
