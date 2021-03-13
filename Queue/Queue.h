@@ -7,11 +7,11 @@ class TQueue
 {
 	T* pMem;
 	int MaxSize;
-	int tail;
 	int head;
+	int tail;
 	int DataCount;
 public:
-	TQueue(int s=10)
+	TQueue(int s=10) //по умолчанию
 	{
 		if (s <= 0 || s > MAX_SIZE)
 		{
@@ -42,7 +42,7 @@ public:
 		delete[]pMem;
 	}
 
-	TQueue& operator=(const TQueue<T>& q)
+	TQueue& operator=(const TQueue<T>& q) //присваивание
 	{
 		if (MaxSize != q.MaxSize)
 		{
@@ -60,7 +60,7 @@ public:
 		return *this;
 	}
 
-	int GetSize()
+	int GetSize() 
 	{
 		return MaxSize;
 	}
@@ -77,7 +77,7 @@ public:
 
 	bool Full()
 	{
-		return DataCount == MaxSize;
+		return DataCount==MaxSize;
 	}
 
 	T Front() //первый в очереди
@@ -105,7 +105,7 @@ public:
 			throw 0;
 		}
 		DataCount++;
-		tail = (tail + 1) % MaxSize;
+		tail = (tail + 1)%MaxSize;
 		pMem[tail] = a;
 		
 	}
@@ -117,10 +117,10 @@ public:
 			throw 0;
 		}
 		DataCount--;
-		head = (head+1)%MaxSize;
+		head = (head + 1)%MaxSize;
 	}
 
-	T& operator[](int pos)
+	T& operator[](int pos) //доступ
 	{
 		if (pos < 0 || pos >= MaxSize)
 		{
@@ -129,7 +129,7 @@ public:
 		return pMem[pos];
 	}
 
-	bool operator==(const TQueue<T>& q) const
+	bool operator==(const TQueue<T>& q) const // сравнение
 	{
 		if (MaxSize != q.MaxSize || DataCount!=q.DataCount)
 		{
@@ -145,7 +145,7 @@ public:
 		return true;
 	}
 
-	bool operator!=(const TQueue<T>& q) const
+	bool operator!=(const TQueue<T>& q) const // сравнение
 	{
 		return !(*this == q);
 	}

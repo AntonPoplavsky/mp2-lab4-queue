@@ -7,9 +7,9 @@ TEST(Queue, can_create_queue_with_positive_size)
   ASSERT_NO_THROW(TQueue <int> q(3));
 }
 
-TEST(Queue, throws_when_create_queue_with_negative_size)
+TEST(Queue, cant_create_queue_with_negative_size)
 {
-	ASSERT_ANY_THROW(TQueue<int> q(-5));
+	ASSERT_ANY_THROW(TQueue <int> q(-5));
 }
 
 TEST(Queue, cant_create_too_large_queue)
@@ -101,16 +101,6 @@ TEST(Queue, can_get_data_count)
 	EXPECT_EQ(2, q.GetDataCount());
 }
 
-TEST(Queue, compare_queue_with_itself_return_true)
-{
-	TQueue <int>q(10);
-	for (int i = 0; i < q.GetSize(); i++)
-	{
-		q[i] = i + 1;
-	}
-	EXPECT_EQ(1, q == q);
-}
-
 TEST(Queue, compare_equal_queues_return_true)
 {
 	TQueue <int> q1(10);
@@ -167,13 +157,6 @@ TEST(Queue, cant_put_in_full_queue)
 	ASSERT_ANY_THROW(q.Push(2));
 }
 
-TEST(Queue, can_put_in_not_full_queue)
-{
-	TQueue<int>q(2);
-	q.Push(1);
-	ASSERT_NO_THROW(q.Push(2));
-}
-
 TEST(Queue, full_queue_return_true)
 {
 	TQueue<int>q(1);
@@ -213,17 +196,6 @@ TEST(Queue, can_return_the_tail)
 	EXPECT_EQ(7, q.Back());
 }
 
-TEST(Queue, check_the_loopback)
-{
-	TQueue <int> q(3);
-	q.Push(1);
-	q.Push(5);
-	q.Push(7);
-	q.Pop();
-	q.Push(9);
-	EXPECT_EQ(9, q.Back());
-	EXPECT_EQ(5, q.Front());
-}
 
 
 

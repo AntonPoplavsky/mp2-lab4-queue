@@ -2,10 +2,11 @@
 //
 
 #include <iostream>
+#include "Queue.h"
 
 int main()
 {
-    
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

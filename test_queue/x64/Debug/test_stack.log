@@ -1,0 +1,32 @@
+﻿  test_queue.cpp
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\Queue\Queue.h(1,9): warning C4068: неизвестная прагма "onceS"
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\Queue\Queue.h(3,34): warning C4305: инициализация: усечение из "__int64" в "int"
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\Queue\Queue.h(3,22): warning C4309: инициализация: усечение константного значения
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\test_queue\gtest.h(18865,1): warning C4805: ==: небезопасное смешение типа "const T1" и типа "const T2" в операции
+          with
+          [
+              T1=int
+          ]
+          and
+          [
+              T2=bool
+          ]
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\test_queue\gtest.h(18902): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::CmpHelperEQ<T1,T2>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\test_queue\test_queue.cpp(112): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Users\Anton\Desktop\My\mp2-lab4-queue\test_queue\test_queue.cpp(112): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+  test_stack.vcxproj -> C:\Users\Anton\Desktop\My\mp2-lab4-queue\x64\Debug\test_queue.exe
